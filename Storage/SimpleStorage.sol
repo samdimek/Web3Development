@@ -5,6 +5,14 @@ contract SimpleStorage {
     uint256 public TargetNumber; // Initialization of variable TargetNumber with zero
     // bool hasTargetNumber = true;
 
+    People public person = People({TargetNumber: 25000, name: "Gray"}); // creating a new person with their target number in the People struct
+
+    // a struct object that holds a person's name and their target number
+    struct People {
+        uint256 TargetNumber;
+        string name;
+    }
+
     function store(uint256 _TargetNumber) public {
         TargetNumber = _TargetNumber; // this function stores the variable TargetNumber
     }
