@@ -9,6 +9,8 @@ contract SimpleStorage {
 
     People[] public people; //creating a dynamic people array 
 
+    mapping (string => uint256) NameToTargetNumber;
+
     // a struct object that holds a person's name and their target number
     struct People {
         uint256 TargetNumber;
@@ -25,5 +27,6 @@ contract SimpleStorage {
 
     function addPerson(string memory _name, uint256 _TargetNumber) public {
         people.push(People(_TargetNumber, _name));
+        NameToTargetNumber[_name] = _TargetNumber;
     }
 }
