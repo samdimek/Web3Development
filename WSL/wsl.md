@@ -17,18 +17,27 @@ You see, you have all the reasons to be using Windows subsystem for Linux. Now l
 
 ## Installation
 #### Prerequisites
-    WINDOWS 10 & ABOVE
+1. WINDOWS 10 & ABOVE
 
 Run the following on your Powershell to install the default Linux distribution ( Ubuntu )
->>>> wsl --install 
+
+    wsl --install 
 
 To check on the available Linux Distros that one can install, use the command
->>> wsl --list --online or wsl -l -o
+
+    wsl --list --online or wsl -l -o
 
 Once you have found the specific distro you want to have, use the command below to install particular distro
->>> wsl --install -d (Distribution Name)
+
+    wsl --install -d (Distribution Name)
 
 The following above commands only execute in Powershell, if incase you are running on Bash, REMEMBER to always include .exe in the commands as seen below.
->>> wsl.exe --install -d Debian
+
+    wsl.exe --install -d Debian
 
 The above command installs WSL through the Bash. Take note, the Debian distro is the one being installed here.
+
+Once the installation is done, run the code below to restart your Windows machine and afterwards the terminal will prompt you to set up your username and password.
+
+    shutdown /r /t 0
+
